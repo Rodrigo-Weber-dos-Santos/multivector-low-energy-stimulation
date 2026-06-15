@@ -1,3 +1,0 @@
-No open-source license has been selected yet.
-
-Before making reuse permissions explicit, the authors should choose an appropriate license for the code and data.
