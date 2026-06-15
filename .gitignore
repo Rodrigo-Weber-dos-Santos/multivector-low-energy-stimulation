@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Build outputs
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Editor/backup files
+*~
+*.bak
+*.backup
+.DS_Store
+
+# Local simulation outputs
+outputs/
+*.vtu
+*.vtk.series
+*.h5
+*.xdmf

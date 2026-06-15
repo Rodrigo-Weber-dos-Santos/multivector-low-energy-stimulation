@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Multi-vector low-energy cardiac stimulation"
+message: "If you use this repository, please cite the associated manuscript."
+authors:
+  - family-names: "Barros"
+    given-names: "Bruno Gouvêa de"
+  - family-names: "Rocha"
+    given-names: "Bernardo Martins"
+  - family-names: "Lobosco"
+    given-names: "Marcelo"
+  - family-names: "Queiroz"
+    given-names: "Rafael Alves Bonfim de"
+  - family-names: "dos Santos"
+    given-names: "Rodrigo Weber"
