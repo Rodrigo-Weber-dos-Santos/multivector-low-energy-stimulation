@@ -124,17 +124,6 @@ Research data, generated figures, and other non-code research outputs provided i
 
 Third-party files included in the source tree retain their existing copyright and license notices.
 
-Please cite the archived software release using the Zenodo DOI when it is available.
-
-## Release checklist
-
-Before creating the Zenodo-linked release for the revised manuscript:
-
-- Create a new GitHub release such as `v1.1.0`; do not reuse the existing `v1.0` release.
-- Add author ORCIDs to `CITATION.cff` if available.
-- Ensure the Zenodo record reflects the mixed licensing: MIT for software and CC BY 4.0 for data and figures.
-- Attach `large_meshes.zip` to the revision release, or explicitly document that users should retrieve the mesh archive from the earlier release asset.
-
 ## Citation
 
-If you use this repository, please cite the associated manuscript. Citation metadata for the planned `v1.1.0` revision release is provided in `CITATION.cff`.
+If you use this repository, please cite it using the metadata in `CITATION.cff`, which lists the manuscript-associated title, authors, and affiliations.
