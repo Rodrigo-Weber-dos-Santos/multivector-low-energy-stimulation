@@ -1,19 +1,19 @@
 cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
 title: "Multi-Vector Low-Energy Cardiac Stimulation Recruits Direction-Dependent Vascular and Boundary Hotspots"
-message: "If you use this repository, please cite it using the metadata in this file."
+type: software
+version: 1.1.0
+date-released: 2026-09-09
+repository-code: "https://github.com/Rodrigo-Weber-dos-Santos/multivector-low-energy-stimulation"
+
 authors:
   - family-names: "Barros"
     given-names: "Bruno Gouvêa de"
-    affiliation: "Universidade Federal de Juiz de Fora, Graduate Program in Computational Modeling, Juiz de Fora, 36036-900, Brazil"
   - family-names: "Rocha"
     given-names: "Bernardo Martins"
-    affiliation: "Universidade Federal de Juiz de Fora, Graduate Program in Computational Modeling, Juiz de Fora, 36036-900, Brazil"
   - family-names: "Lobosco"
     given-names: "Marcelo"
-    affiliation: "Universidade Federal de Juiz de Fora, Graduate Program in Computational Modeling, Juiz de Fora, 36036-900, Brazil"
   - family-names: "Queiroz"
     given-names: "Rafael Alves Bonfim de"
-    affiliation: "Universidade Federal de Ouro Preto, Ouro Preto, Brazil"
   - family-names: "dos Santos"
     given-names: "Rodrigo Weber"
-    affiliation: "Universidade Federal de Juiz de Fora, Graduate Program in Computational Modeling, Juiz de Fora, 36036-900, Brazil"
