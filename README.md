@@ -90,7 +90,7 @@ python scripts/make_figures/BoxPlotBorderTree.py
 
 Some figure scripts assemble panels from images in `figures/source_panels/`; if needed, adjust the relative paths in the script to match your local working directory.
 
-## Corrected 2-D monodomain/bidomain comparison
+## monodomain/bidomain comparison
 
 The revision workflow in `code/BidovsMono/` can be run independently from that directory:
 
@@ -100,7 +100,7 @@ python -m pip install -r requirements.txt
 python run_corrected_skfem.py
 ```
 
-This generates the corrected field sweep, activation maps, archived arrays, and comparison figures in `code/BidovsMono/out_corrected/` and `code/BidovsMono/figures/`. See `code/BidovsMono/README.md` for the exact plotting command used for the final 2 x 2 activation-map figure.
+This generates the field sweep, activation maps, archived arrays, and comparison figures in `code/BidovsMono/out_corrected/` and `code/BidovsMono/figures/`. See `code/BidovsMono/README.md` for the exact plotting command used for the final 2 x 2 activation-map figure.
 
 ## Simulation scripts
 
