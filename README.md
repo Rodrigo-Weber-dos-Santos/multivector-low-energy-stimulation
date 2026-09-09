@@ -9,7 +9,7 @@ This repository contains code, scripts, processed data, and figure-generation ma
 ```text
 code/
   cardiaxFull/                 C++ finite-element cardiac electrophysiology solver
-  BidovsMono/                  Corrected 2-D monodomain/bidomain comparison workflow
+  BidovsMono/                  Monodomain/bidomain comparison workflow
   CenterlinesToGeometry/       Python scripts for vascular centerline/geometric processing
 scripts/
   run_protocols/               Shell scripts documenting the stimulation protocols
@@ -33,7 +33,7 @@ LICENSE-DATA                   CC BY 4.0 license notice for data and figures
 
 - `code/cardiaxFull/` contains the full Cardiax finite-element solver used for cardiac electrophysiology simulations, including monodomain/bidomain and related PDE components.
 - `code/CenterlinesToGeometry/` contains the vascular-tree centerline and geometry-processing utilities used to prepare vessel structures.
-- `code/BidovsMono/` contains the corrected 2-D monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, the ten Tusscher--Panfilov 2006 ionic model, plotting scripts, archived corrected outputs, and the two generated comparison figures.
+- `code/BidovsMono/` contains the corrected monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, the ten Tusscher--Panfilov ionic model, plotting scripts, archived corrected outputs, and the two generated comparison figures.
 
 ## Processed data
 
@@ -57,7 +57,7 @@ figures/submission_2/
 
 This directory contains the figures referenced by the revised manuscript. The previous submitted figure set is retained in `figures/submission_1/`, and reusable image panels used by the figure-generation scripts are retained in `figures/source_panels/`.
 
-The corrected 2-D monodomain/bidomain comparison workflow also keeps its generated PDF and PNG outputs in `code/BidovsMono/figures/`; the manuscript-ready copies are included in `figures/submission_2/`.
+The monodomain/bidomain comparison workflow also keeps its generated PDF and PNG outputs in `code/BidovsMono/figures/`; the manuscript-ready copies are included in `figures/submission_2/`.
 
 ## Large mesh files
 
@@ -75,7 +75,6 @@ data/meshes/testeNoTree.xml
 data/meshes/arvoreCoracao.trelis
 ```
 
-For archival releases, attach `large_meshes.zip` to the same GitHub release as the source archive, or explicitly cite the earlier release asset that contains it. Do not assume GitHub release assets are automatically included in the Zenodo source-code archive.
 
 ## Running figure scripts
 
@@ -94,7 +93,7 @@ python scripts/make_figures/BoxPlotBorderTree.py
 
 The figure scripts load their local Matplotlib style files relative to the script location. Some scripts assemble panels from images in `figures/source_panels/`; if needed, adjust the image input paths in the script to match your local working directory.
 
-## Corrected 2-D monodomain/bidomain comparison
+## monodomain/bidomain comparison
 
 The revision workflow in `code/BidovsMono/` can be run independently from that directory:
 
