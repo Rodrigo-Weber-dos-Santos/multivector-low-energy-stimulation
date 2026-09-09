@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -27,7 +28,7 @@ y_4_05 = [19.25, 19.85, 19, 19.8, 19, 19.8]
 
 eixox = "Field Strength(V/cm)"
 eixoy = "Activation time(ms)"
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig, axs = plt.subplots(1, 5,sharey=True, gridspec_kw={'wspace': 0})
 
 y_01 = [y_1_01, y_2_01, y_3_01, y_4_01]

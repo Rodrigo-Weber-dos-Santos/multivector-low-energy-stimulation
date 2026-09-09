@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -8,7 +9,7 @@ imgV2 = mpimg.imread('FiguraAtivacaoCoracaoSemBorda_X.png')
 imgV3 = mpimg.imread('FiguraAtivacaoCoracaoSemBorda_y.png')
 imgV4 = mpimg.imread('FiguraAtivacaoCoracaoSemBorda_Y.png')
 imgVT = mpimg.imread('FiguraAtivacaoCoracaoSemBorda_ALL.png')
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 gs = gridspec.GridSpec(2, 3, wspace = 0, hspace = 0, left=0.005, bottom=0.005, right=0.995, top=0.995)
 ax1 = fig.add_subplot(gs[0, 0])

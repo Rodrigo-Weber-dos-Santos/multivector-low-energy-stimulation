@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -10,7 +11,7 @@ import matplotlib.ticker as ticker
 def test_func(x, N, a):
     return N * np.power(x,a)
 
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 #gs = gridspec.GridSpec(2, 1, wspace = 0, hspace = 0)
 gs = gridspec.GridSpec(3, 2, wspace = 0.30, hspace = 0.35)

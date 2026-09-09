@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -9,7 +10,7 @@ imgV3 = mpimg.imread('simu2_t9.png')
 imgV4 = mpimg.imread('simu2_t1_4v.png')
 imgV5 = mpimg.imread('simu2_t5_4v.png')
 imgV6 = mpimg.imread('simu2_t9_4v.png')
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 gs = gridspec.GridSpec(2, 3, wspace = 0, hspace = 0)
 ax1 = fig.add_subplot(gs[0, 0])

@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -10,7 +11,7 @@ imgV4 = mpimg.imread('MV4.png')
 imgV5 = mpimg.imread('MV5.png')
 imgV6 = mpimg.imread('MV6.png')
 imgVT = mpimg.imread('MT.png')
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 gs = gridspec.GridSpec(2, 4, wspace = 0, hspace = 0, left=0.005, bottom=0.005, right=0.995, top=0.995)
 ax1 = fig.add_subplot(gs[0, 0])

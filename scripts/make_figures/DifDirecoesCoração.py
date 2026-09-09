@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 x = [0.1, 0.2, 0.3, 0.4, 0.5]
 #y1 = [4.83135824977209, 10.5654761904762, 6.58578856152512, 4.31519699812384, 6.12244897959184]
@@ -14,7 +15,7 @@ y2=[-18.3955739972338,	25.5357142857143,	13.7667304015296,	13.0165289256198,	17.
 
 eixox = "Field Strength(V/cm)"
 eixoy = "Improvement(%)"
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 plt.locator_params(axis='x', nbins=5)
 plt.xlabel(eixox)
 plt.ylabel(eixoy)

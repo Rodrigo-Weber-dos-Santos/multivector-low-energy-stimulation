@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -7,7 +8,7 @@ from scipy import optimize
 def test_func(x, N, a):
     return N * x ** (a)
 
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 #gs = gridspec.GridSpec(2, 1, wspace = 0, hspace = 0)
 gs = gridspec.GridSpec(2, 1, wspace = 0)

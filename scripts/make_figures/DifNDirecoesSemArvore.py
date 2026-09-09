@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 x = [0.1, 0.2, 0.3, 0.4, 0.5]
 y1 = [9.62,10.04,10.04,9.93,9.88]
@@ -6,7 +7,7 @@ y3 = [2.5,13.29,12.66,12.18,11.82]
 
 eixox = "Field Strength(V/cm)"
 eixoy = "Difference in activation time(ms)"
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 plt.locator_params(axis='x', nbins=5)
 plt.xlabel(eixox)
 plt.ylabel(eixoy)

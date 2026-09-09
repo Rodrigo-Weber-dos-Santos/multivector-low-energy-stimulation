@@ -9,7 +9,7 @@ This repository contains code, scripts, processed data, and figure-generation ma
 ```text
 code/
   cardiaxFull/                 C++ finite-element cardiac electrophysiology solver
-  BidovsMono/                  Monodomain/bidomain comparison workflow
+  BidovsMono/                  Corrected 2-D monodomain/bidomain comparison workflow
   CenterlinesToGeometry/       Python scripts for vascular centerline/geometric processing
 scripts/
   run_protocols/               Shell scripts documenting the stimulation protocols
@@ -25,13 +25,15 @@ figures/
 environment/
   requirements.txt             Python packages for figure scripts
   dependencies.md              Notes on Python and simulation-code dependencies
+LICENSE                        MIT License for source code
+LICENSE-DATA                   CC BY 4.0 license notice for data and figures
 ```
 
 ## Code directories
 
 - `code/cardiaxFull/` contains the full Cardiax finite-element solver used for cardiac electrophysiology simulations, including monodomain/bidomain and related PDE components.
 - `code/CenterlinesToGeometry/` contains the vascular-tree centerline and geometry-processing utilities used to prepare vessel structures.
-- `code/BidovsMono/` contains the monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, plotting scripts, archived corrected outputs, and the two generated comparison figures.
+- `code/BidovsMono/` contains the corrected 2-D monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, the ten Tusscher--Panfilov 2006 ionic model, plotting scripts, archived corrected outputs, and the two generated comparison figures.
 
 ## Processed data
 
@@ -53,7 +55,7 @@ The latest figure set for the submitted manuscript is available in:
 figures/submission_2/
 ```
 
-The previous submitted figure set is retained in `figures/submission_1/`, and reusable image panels used by the figure-generation scripts are retained in `figures/source_panels/`.
+This directory contains the figures referenced by the revised manuscript. The previous submitted figure set is retained in `figures/submission_1/`, and reusable image panels used by the figure-generation scripts are retained in `figures/source_panels/`.
 
 The corrected 2-D monodomain/bidomain comparison workflow also keeps its generated PDF and PNG outputs in `code/BidovsMono/figures/`; the manuscript-ready copies are included in `figures/submission_2/`.
 
@@ -73,6 +75,8 @@ data/meshes/testeNoTree.xml
 data/meshes/arvoreCoracao.trelis
 ```
 
+For archival releases, attach `large_meshes.zip` to the same GitHub release as the source archive, or explicitly cite the earlier release asset that contains it. Do not assume GitHub release assets are automatically included in the Zenodo source-code archive.
+
 ## Running figure scripts
 
 Install the Python dependencies:
@@ -88,9 +92,9 @@ python scripts/make_figures/Times_Directions.py
 python scripts/make_figures/BoxPlotBorderTree.py
 ```
 
-Some figure scripts assemble panels from images in `figures/source_panels/`; if needed, adjust the relative paths in the script to match your local working directory.
+The figure scripts load their local Matplotlib style files relative to the script location. Some scripts assemble panels from images in `figures/source_panels/`; if needed, adjust the image input paths in the script to match your local working directory.
 
-## monodomain/bidomain comparison
+## Corrected 2-D monodomain/bidomain comparison
 
 The revision workflow in `code/BidovsMono/` can be run independently from that directory:
 
@@ -100,17 +104,37 @@ python -m pip install -r requirements.txt
 python run_corrected_skfem.py
 ```
 
-This generates the field sweep, activation maps, archived arrays, and comparison figures in `code/BidovsMono/out_corrected/` and `code/BidovsMono/figures/`. See `code/BidovsMono/README.md` for the exact plotting command used for the final 2 x 2 activation-map figure.
+This generates the corrected field sweep, activation maps, archived arrays, and comparison figures in `code/BidovsMono/out_corrected/` and `code/BidovsMono/figures/`. See `code/BidovsMono/README.md` for the exact plotting command used for the final 2 x 2 activation-map figure.
 
 ## Simulation scripts
 
-The shell scripts in `scripts/run_protocols/` record the command-line stimulation protocols used with the monodomain solver. The environment variable `MESH_DIR` can be used to point the scripts to the local folder containing the mesh files:
+The shell scripts in `scripts/run_protocols/` record the command-line stimulation protocols used with the monodomain solver. They can be launched from the repository root. By default, they look for meshes in `data/meshes/`; set `MESH_DIR` to use another mesh directory. If the `monodomain` executable is not on your `PATH`, set `MONODOMAIN` to the built solver executable:
 
 ```bash
+export MONODOMAIN=/path/to/monodomain
 export MESH_DIR=/path/to/mesh/files
 bash scripts/run_protocols/script_arvore_4_dir.sh
 ```
 
+## License
+
+Source code in this repository is distributed under the MIT License. See `LICENSE`.
+
+Research data, generated figures, and other non-code research outputs provided in the `data/` and `figures/` directories are distributed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. See `LICENSE-DATA`.
+
+Third-party files included in the source tree retain their existing copyright and license notices.
+
+Please cite the archived software release using the Zenodo DOI when it is available.
+
+## Release checklist
+
+Before creating the Zenodo-linked release for the revised manuscript:
+
+- Create a new GitHub release such as `v1.1.0`; do not reuse the existing `v1.0` release.
+- Add author ORCIDs to `CITATION.cff` if available.
+- Ensure the Zenodo record reflects the mixed licensing: MIT for software and CC BY 4.0 for data and figures.
+- Attach `large_meshes.zip` to the revision release, or explicitly document that users should retrieve the mesh archive from the earlier release asset.
+
 ## Citation
 
-If you use this repository, please cite the associated manuscript.
+If you use this repository, please cite the associated manuscript. Citation metadata for the planned `v1.1.0` revision release is provided in `CITATION.cff`.

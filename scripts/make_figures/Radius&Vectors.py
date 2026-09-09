@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -6,7 +7,7 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 img = mpimg.imread('fig_vessels_2.png')
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 gs = gridspec.GridSpec(1, 2, wspace = 0, hspace = 0, left=0.005, bottom=0.005, right=0.995, top=0.995)
 ax1 = fig.add_subplot(gs[0, 0])

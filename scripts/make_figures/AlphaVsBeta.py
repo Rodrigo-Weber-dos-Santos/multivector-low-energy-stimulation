@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 plt.margins(0.5)
@@ -10,7 +11,7 @@ y1 = [-0.38,-0.63,-0.85,-0.46,-0.51,-0.75]
 y2 = [-0.91,-0.93,-0.87,-0.92,-0.65,-0.98]
 eixox = "\u03B1"
 eixoy = "\u03B2"
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 fig.tight_layout()
 #plt.locator_params(axis='x', nbins=5)

@@ -1,3 +1,4 @@
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
@@ -10,7 +11,7 @@ imgV3 = mpimg.imread('tree3_3.png')
 imgV4 = mpimg.imread('tree4_3.png')
 imgV5 = mpimg.imread('tree5_3.png')
 imgV6 = mpimg.imread('tree6_3.png')
-plt.style.use('PlotStyle.mplstyle')
+plt.style.use(Path(__file__).resolve().parent / 'PlotStyle.mplstyle')
 fig = plt.figure()
 gs = gridspec.GridSpec(2, 3, wspace = 0, hspace = 0, left=0.005, bottom=0.005, right=0.995, top=0.995)
 ax1 = fig.add_subplot(gs[0, 0])
