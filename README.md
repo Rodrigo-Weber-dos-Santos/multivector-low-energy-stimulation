@@ -9,7 +9,7 @@ This repository contains code, scripts, processed data, and figure-generation ma
 ```text
 code/
   cardiaxFull/                 C++ finite-element cardiac electrophysiology solver
-  BidovsMono/                  Corrected 2-D monodomain/bidomain comparison workflow
+  BidovsMono/                  Monodomain/bidomain comparison workflow
   CenterlinesToGeometry/       Python scripts for vascular centerline/geometric processing
 scripts/
   run_protocols/               Shell scripts documenting the stimulation protocols
@@ -31,7 +31,7 @@ environment/
 
 - `code/cardiaxFull/` contains the full Cardiax finite-element solver used for cardiac electrophysiology simulations, including monodomain/bidomain and related PDE components.
 - `code/CenterlinesToGeometry/` contains the vascular-tree centerline and geometry-processing utilities used to prepare vessel structures.
-- `code/BidovsMono/` contains the corrected 2-D monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, the ten Tusscher--Panfilov 2006 ionic model, plotting scripts, archived corrected outputs, and the two generated comparison figures.
+- `code/BidovsMono/` contains the monodomain/bidomain comparison workflow added for the manuscript revision. It includes the scikit-fem execution driver, plotting scripts, archived corrected outputs, and the two generated comparison figures.
 
 ## Processed data
 
