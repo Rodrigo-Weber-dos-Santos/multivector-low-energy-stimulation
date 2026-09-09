@@ -1,4 +1,4 @@
-# Corrected 2-D monodomain--bidomain comparison
+# monodomain--bidomain comparison
 
 This directory contains the final code and archived data used to generate the
 two new figures prepared for the revision of *Multi-Vector Low-Energy Cardiac
@@ -10,8 +10,6 @@ Stimulation Recruits Direction-Dependent Vascular and Boundary Hotspots*.
   actually executed to generate the corrected field sweep, the four
   activation-time maps at 0.5 V/cm, and the activation-time-versus-field
   figure.
-- `tnnp2006.py` implements the ten Tusscher--Panfilov 2006 ventricular ionic
-  model used by the execution driver.
 - `plot_acttime.py` reads the archived activation maps and generated the final
   2 x 2 activation-map figure.
 - `multivector_bidomain_2d_corrected.py` is the corresponding DOLFINx version.
