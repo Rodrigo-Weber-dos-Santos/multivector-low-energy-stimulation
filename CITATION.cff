@@ -5,7 +5,6 @@ type: software
 version: 1.1.0
 date-released: 2026-09-09
 repository-code: "https://github.com/Rodrigo-Weber-dos-Santos/multivector-low-energy-stimulation"
-
 authors:
   - family-names: "Barros"
     given-names: "Bruno Gouvêa de"
@@ -17,3 +16,5 @@ authors:
     given-names: "Rafael Alves Bonfim de"
   - family-names: "dos Santos"
     given-names: "Rodrigo Weber"
+doi: 10.5281/zenodo.22695781
+
